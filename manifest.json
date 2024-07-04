@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Pause/Resume",
+    "version": "1.0",
+    "description": "Automatically pause the YouTube video when switching windows and resume when returning.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions":["https://www.youtube.com/watch"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/watch"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+    }
+  }
+  
+  
